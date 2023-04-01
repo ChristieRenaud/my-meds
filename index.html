@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Meds</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/15f9f9f937.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>MyMeds</h1>
+    </header>
+    <div class="container">
+      <div class="meds-list">
+        <h2 class="subhead">Medicines</h2>
+        <ul class="list-items" id="meds-list-items"></ul>
+      </div>
+      <form class="meds-form">
+        <label class="med-name" for="med-name">Drug Name</label>
+        <input class="med-name" id="med-name" type="text" />
+        <label class="med-amt" for="med-amt">Amount</label>
+        <input class="med-amt" id="med-amt" type="text" />
+        <button class="btn-form" id="add-button">Submit</button>
+      </form>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
