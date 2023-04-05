@@ -40,7 +40,7 @@ h1 {
 .container {
   background-color: #f1cd71;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 0;
   padding: 30px 35px;
 }
@@ -86,6 +86,7 @@ li {
 label {
   font-weight: 600;
   padding-bottom: 5px;
+  color: rgb(37, 67, 108, 0.8);
 }
 input {
   margin-bottom: 15px;

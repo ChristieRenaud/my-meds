@@ -25,8 +25,7 @@ addButtonEl.addEventListener('click', (e) => {
   e.preventDefault()
   let medNameValue = medNameInputEl.value
   let medAmtValue = medAmtInputEl.value
-  // let medInfoValue = getMedInfo(medNameValue)
-  // console.log(getMedInfo(medNameValue))
+
   const options = {
     method: 'GET',
     headers: {
@@ -39,7 +38,6 @@ addButtonEl.addEventListener('click', (e) => {
     options,
   )
     .then((response) => response.text())
-    // .then((response) => console.log(response))
     .then((response) => {
       if (medNameValue && medAmtValue) {
         push(medsListInDatabase, {
@@ -105,21 +103,17 @@ function addItemToMedsListEl(itemValue, itemID) {
   })
 
   newLiEl.addEventListener('mouseover', () => {
-    newTrashIconEl.style.display === 'none' || !newTrashIconEl.style.display
-      ? (newTrashIconEl.style.display = 'inline')
-      : (newTrashIconEl.style.display = 'none')
+    toggleElement(newTrashIconEl)
   })
 
   newLiEl.addEventListener('mouseout', () => {
-    newTrashIconEl.style.display === 'none' || !newTrashIconEl.style.display
-      ? (newTrashIconEl.style.display = 'inline')
-      : (newTrashIconEl.style.display = 'none')
+    toggleElement(newTrashIconEl)
   })
 }
 
 function toggleElement(element) {
   !element.style.display || element.style.display === 'none'
-    ? (element.style.display = 'block')
+    ? (element.style.display = 'inline')
     : (element.style.display = 'none')
 }
 
@@ -137,8 +131,5 @@ function getMedInfo(medName) {
   )
     .then((response) => response.text())
     .then((response) => console.log(response))
-    // .then((response) => {
-    //   return response
-    // })
     .catch((err) => console.error(err))
 }
