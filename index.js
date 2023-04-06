@@ -1,3 +1,4 @@
+import { KEY } from './config.js'
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js'
 import {
   getDatabase,
@@ -29,7 +30,7 @@ addButtonEl.addEventListener('click', (e) => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '0bdb3b24c3msh749b1ea33d473a8p1f25d4jsnb4ba92a7cc64',
+      'X-RapidAPI-Key': KEY,
       'X-RapidAPI-Host': 'ai-medicine-dictionary.p.rapidapi.com',
     },
   }
@@ -121,7 +122,7 @@ function getMedInfo(medName) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '0bdb3b24c3msh749b1ea33d473a8p1f25d4jsnb4ba92a7cc64',
+      'X-RapidAPI-Key': process.env.RAPID_API_KEY,
       'X-RapidAPI-Host': 'ai-medicine-dictionary.p.rapidapi.com',
     },
   }
